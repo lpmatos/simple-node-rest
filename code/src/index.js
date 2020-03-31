@@ -4,7 +4,7 @@ const crypto = require("crypto");
 const port = config.NODE_PORT;
 const server = express();
 const projects = Array();
-const connection = require("./database/connector");
+//const connection = require("./database/connector");
 
 server.use(express.json());
 
@@ -101,5 +101,10 @@ server.get("/healthcheck", (request, response) => {
 
 // *****************************************************************************
 
-server.listen(port);
-console.log(`Running Server on ${port}.`);
+server.listen(port, (error) => {
+  if (error) {
+    console.error(`Error starting Server ${error}`);
+  } else {
+    console.log(`Server listening at port ${port}.`);
+  }
+});

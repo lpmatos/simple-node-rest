@@ -21,8 +21,6 @@ COPY [ "./*.json", "." ]
 
 RUN yarn install
 
-WORKDIR ${HOME}
-
 COPY [ ".", "." ]
 
 HEALTHCHECK --interval=1m --timeout=2m CMD curl 0.0.0.0:3301/healthcheck

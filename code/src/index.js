@@ -12,7 +12,7 @@ server.use(routes);
 server.listen(port, (error) => {
   if (error) {
     console.error(`Error starting Server ${error}`);
-  } else {
+  }else{
     console.log(`Server listening at port ${port}.`);
   }
 });

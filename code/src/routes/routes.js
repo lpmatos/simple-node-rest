@@ -1,6 +1,5 @@
 const express = require("express");
 const routes = express.Router();
-const projects = Array();
 
 // Getting Controllers
 const ProjectController = require("../controllers/ProjectController");

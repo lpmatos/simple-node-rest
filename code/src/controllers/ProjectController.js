@@ -1,15 +1,15 @@
 const crypto = require("crypto");
 const projects = Array();
 
-function findProject(projects, id){
+const findProject = (projects, id) => {
   const project = projects.find(project => project.id = id);
   return project ? project : NaN;
-}
+};
 
-function findIndexProject(projects, id){
+const findIndexProject = (projects, id) => {
   const project = projects.findIndex(project => project.id = id);
   return project ? project : NaN;
-}
+};
 
 module.exports = {
   index(request, response){

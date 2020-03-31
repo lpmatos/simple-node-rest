@@ -4,6 +4,7 @@ const routes = require("./routes/routes");
 const config = require("./settings/config");
 const port = config.NODE_PORT;
 const server = express();
+const pool = require("./database/connector");
 
 server.use(cors());
 server.use(express.json());

@@ -1,21 +1,27 @@
 const mysql = require("mysql");
 const config = require("../settings/config");
 
-const connection = mysql.createConnection({
-  host: config.MYSQL_HOST,
-  user: config.MYSQL_USER,
-  password: config.MYSQL_PASSWORD,
-  port: config.MYSQL_PORT,
-  database: config.MYSQL_DATABASE,
+const pool = mysql.createPool({
+  connectionLimit: 50,
+  acquireTimeout:  100000,
+  connectTimeout:  100000,
+  host: "mysql",
+  user: "root",
+  password: "123456",
+  port: "3306",
+  database: "database",
 });
 
-connection.connect(error => {
-  if(error) {
-    console.log("Bad connection with database... ", error);
-    return;
-  }else {
-    console.log("Sucess connection with database");
-  }
-});
+console.log("pool => criado");
 
-module.exports = connection;
+pool.on("release", () => console.log("pool => conexão retornada")); 
+
+process.on("SIGINT", () => 
+    pool.end(err => {
+        if(err) return console.log(err);
+        console.log("pool => fechado");
+        process.exit(0);
+    })
+); 
+
+module.exports = pool;

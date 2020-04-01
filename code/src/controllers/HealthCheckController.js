@@ -1,8 +1,8 @@
-module.exports = {
-  index(request, response){
+export default {
+  index(request, response) {
     return response.sendStatus(200).json({
       status: 200,
-      message: "Okay!"
+      message: 'Okay!',
     });
   },
 };

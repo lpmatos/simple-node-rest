@@ -8,7 +8,7 @@ LABEL maintainer="Lucca Pessoa da Silva Matos - luccapsm@gmail.com" \
         org.label-schema.url="https://github.com/lpmatos" \
         org.label-schema.node="https://nodejs.org/en/" \
         org.label-schema.npm="https://www.npmjs.com/" \
-        org.label-schema.name="Simple Node Rest" 
+        org.label-schema.name="Simple Node API Rest"
 
 ENV HOME=/usr/src/code
 
@@ -17,7 +17,7 @@ RUN set -ex && apk update && \
 
 WORKDIR ${HOME}
 
-COPY [ "./*.json", "." ]
+COPY [ "package.json", "." ]
 
 RUN yarn install
 

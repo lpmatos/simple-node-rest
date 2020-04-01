@@ -76,6 +76,25 @@ Se eu chamar a rota `POST /projects` repassando `{ id: 1, title: 'Novo projeto' 
 
 - Crie um middleware global chamado em todas requisições que imprime (`console.log`) uma contagem de quantas requisições foram feitas na aplicação até então;
 
+### Pre-requisitos
+
+* Node.js
+* NPM ou Yarn
+* VSCode
+* Docker
+* Docker-Compose
+
+### :rocket: Tecnologias usadas
+
+Este maravilindo projeto foi desenvolvido com as seguintes tecnologias:
+- [Node.js](https://nodejs.org/en/)
+- [Express](https://expressjs.com/pt-br/)
+- [Nodemon](https://www.npmjs.com/package/nodemon)
+- [Cors](https://www.npmjs.com/package/cors)
+- [Eslint](https://www.npmjs.com/package/eslint)
+- [Sucrase](https://www.npmjs.com/package/sucrase)
+- [Prettier](https://prettier.io/)
+
 ## 🐋 Development with Docker
 
 ![Alt text](docs/images/DOCKER.png?raw=true "Docker")
@@ -116,7 +135,7 @@ docker exec -it <CONTAINER_NAME> <COMMAND>
 
 ### Cleaning
 
-Steps to clean your Docker environment. 
+Steps to clean your Docker environment.
 
 ```bash
 docker system prune -af
@@ -240,4 +259,4 @@ Hey!! If you like this project or if you find some bugs feel free to contact me 
 
 ---
 
-Feito com ❤️ by **Lucca Pessoa** 
+<p align="center">Feito com ❤️ by <strong>Lucca Pessoa :wave: </p>

@@ -26,3 +26,16 @@ All important changes to this project will be added to this file! This changelog
   * Global Middleware.
   * Check project ID Middleware.
 * All packages we install using yarn.
+
+## 1.1.0
+
+### Added
+
+* ESlint, prettier, sucrease.
+* Editorconfig.
+* Using import and export modules sintaxy.
+
+### Removed
+
+* Removed MySQL in docker-compose. This is because we create a simple simples api rest.
+* Remove database.js script connector.

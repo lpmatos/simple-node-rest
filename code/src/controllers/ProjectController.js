@@ -1,63 +1,54 @@
-const crypto = require("crypto");
-const projects = Array();
+/* eslint-disable no-return-assign */
+import crypto from 'crypto';
 
-const findProject = (projects, id) => {
-  const project = projects.find(project => project.id = id);
-  return project ? project : NaN;
-};
+const projects = [];
 
-const findIndexProject = (projects, id) => {
-  const project = projects.findIndex(project => project.id = id);
-  return project ? project : NaN;
-};
-
-module.exports = {
-  index(request, response){
+export default {
+  index(request, response) {
     return response.json(projects);
   },
 
-  create(request, response){
+  create(request, response) {
     const { title } = request.body;
     projects.push({
-      id: crypto.randomBytes(4).toString("HEX"),
-      title: title,
-      tasks: []
+      id: crypto.randomBytes(4).toString('HEX'),
+      title,
+      tasks: [],
     });
     return response.json(projects);
   },
 
-  createTask(request, response){
+  createTask(request, response) {
     const { id } = request.params;
     const { tasks } = request.body;
-    const project = findProject(projects, id);
+    const project = projects.find((p) => (p.id = id));
     project.tasks = tasks;
     return response.json(project);
   },
 
-  update(request, response){
+  update(request, response) {
     const { id } = request.params;
     const { title } = request.body;
-    const project = findProject(projects, id);
+    const project = projects.find((p) => (p.id = id));
     project.title = title;
     return response.json(project);
   },
 
-  delete(request, response){
+  delete(request, response) {
     const { id } = request.params;
-    const project = findIndexProject(projects, id);
+    const project = projects.findIndex((p) => (p.id = id));
     projects.splice(project, 1);
     return response.send();
   },
 
-  checkProjectExist(request, response, next){
+  checkProjectExist(request, response, next) {
     const { id } = request.params;
-    const project = findProject(projects, id);
-    if(project){
+    const project = projects.find((p) => (p.id = id));
+    if (project) {
       next();
-    }else{
-      return response.status(400).json({
-        error: "Project NotFount"
-      });
     }
+    return response.status(400).json({
+      error: 'Project NotFount',
+    });
   },
 };

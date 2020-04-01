@@ -1,12 +1,10 @@
 <h1 align="center">
-    <img alt="GoStack" src="https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/bootcamp-header.png" width="200px" />
+    <img alt="description" src="https://miro.medium.com/max/3440/1*GPQ7MDPCOdpdJSXP2f3Jjw.png" width="200px" />
 </h1>
 
 <h3 align="center">
-  Desafio 1: Conceitos do NodeJS
+  Simples API Rest with NodeJS
 </h3>
-
-<p align="center">“Sua única limitação é você mesmo”!</blockquote>
 
 <p align="center">
 

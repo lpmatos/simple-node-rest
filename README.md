@@ -1,10 +1,10 @@
-<h1 align="center">
-    <img alt="description" src="https://miro.medium.com/max/3440/1*GPQ7MDPCOdpdJSXP2f3Jjw.png" width="200px" />
-</h1>
-
-<h3 align="center">
-  Simples API Rest with NodeJS
-</h3>
+<p align="center">
+  <img alt="description" src="https://miro.medium.com/max/3440/1*GPQ7MDPCOdpdJSXP2f3Jjw.png" width="500px" float="center"/>
+</p>
+<h1 align="center">💻 Simples API Rest with NodeJS 💻</h1>
+<p align="center">
+  <strong>Basic project used NodeJS to build a Simples Rest API with Docker and Docker-Compose</strong>
+</p>
 
 <p align="center">
 

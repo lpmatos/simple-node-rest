@@ -37,7 +37,7 @@
   </a>
 
   <a href="https://github.com/lpmatos/simple-node-rest/issues">
-    <img alt="Repository Issues" src="https://img.shields.io/github/issues/lpmatos/semana-simple-node-rest-10">
+    <img alt="Repository Issues" src="https://img.shields.io/github/issues/lpmatos/simple-node-rest-10">
   </a>
 
   <a href="https://github.com/lpmatos/simple-node-rest/blob/master/LICENSE">

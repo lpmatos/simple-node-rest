@@ -9,23 +9,49 @@
 <p align="center">“Sua única limitação é você mesmo”!</blockquote>
 
 <p align="center">
-  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/rocketseat/bootcamp-gostack-desafio-01?color=%2304D361">
 
-  <a href="https://rocketseat.com.br">
-    <img alt="Made by Rocketseat" src="https://img.shields.io/badge/made%20by-Rocketseat-%2304D361">
+  <a href="https://github.com/lpmatos/simple-node-rest">
+    <img alt="Open Source" src="https://badges.frapsoft.com/os/v1/open-source.svg?v=102">
   </a>
 
-  <img alt="License" src="https://img.shields.io/badge/license-MIT-%2304D361">
+  <a href="https://github.com/lpmatos/simple-node-rest/graphs/contributors">
+    <img alt="GitHub Contributors" src="https://img.shields.io/github/contributors/lpmatos/simple-node-rest">
+  </a>
+  
+  <a href="https://github.com/lpmatos/simple-node-rest">
+    <img alt="GitHub Language Count" src="https://img.shields.io/github/languages/count/lpmatos/simple-node-rest">
+  </a>
 
-  <a href="https://github.com/Rocketseat/bootcamp-gostack-desafio-01/stargazers">
-    <img alt="Stargazers" src="https://img.shields.io/github/stars/rocketseat/bootcamp-gostack-desafio-01?style=social">
+  <a href="https://github.com/lpmatos/simple-node-rest">
+    <img alt="GitHub Top Language" src="https://img.shields.io/github/languages/top/lpmatos/simple-node-rest">
+  </a>
+
+  <a href="https://github.com/lpmatos/simple-node-rest/stargazers">
+    <img alt="GitHub Stars" src="https://img.shields.io/github/stars/lpmatos/simple-node-rest?style=social">
+  </a>
+
+  <a href="https://github.com/lpmatos/simple-node-rest/commits/master">
+    <img alt="GitHub Last Commit" src="https://img.shields.io/github/last-commit/lpmatos/simple-node-rest">
+  </a>
+
+  <a href="https://github.com/lpmatos/simple-node-rest">
+    <img alt="Repository Size" src="https://img.shields.io/github/repo-size/lpmatos/simple-node-rest">
+  </a>
+
+  <a href="https://github.com/lpmatos/simple-node-rest/issues">
+    <img alt="Repository Issues" src="https://img.shields.io/github/issues/lpmatos/semana-simple-node-rest-10">
+  </a>
+
+  <a href="https://github.com/lpmatos/simple-node-rest/blob/master/LICENSE">
+    <img alt="MIT License" src="https://img.shields.io/github/license/lpmatos/simple-node-rest">
   </a>
 </p>
 
 <p align="center">
-  <a href="#rocket-sobre-o-desafio">Sobre o desafio</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-entrega">Entrega</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#memo-licença">Licença</a>
+  <a href="#built-with">Technology</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-project">Project</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-how-to-contribute">How to contribute</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-license">License</a>
 </p>
 
 ## ▶️ Getting Started
@@ -33,18 +59,49 @@
 To use this repository you need to make a **git clone**:
 
 ```bash
-git clone --depth 1 https://github.com/lpmatos/omnistack.git -b master
+git clone --depth 1 https://github.com/lpmatos/simple-node-rest.git -b master
 ```
 
 Pull requests are welcome. If you'd like to support the work and buy me a ☕, I greatly appreciate it!
 
 <a href="https://www.buymeacoffee.com/EatdMck" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: 41px !important;width: 100px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
 
-## :rocket: Sobre
+### Prerequisites
+
+**Tools**
+:---:
+**NodeJS**
+**NPM ou Yarn**
+**VSCode**
+**Docker**
+**Docker-Compose**
+
+### :rocket: Built with
+
+Este maravilindo projeto foi desenvolvido com as seguintes tecnologias:
+
+- [NodeJS](https://nodejs.org/en/)
+
+- Dev Tools
+  - [Docker](https://docs.docker.com/)
+  - [Docker Compose](https://docs.docker.com/compose/)
+  - [Nodemon](https://www.npmjs.com/package/nodemon)
+  - [Sucrase](https://www.npmjs.com/package/sucrase)
+
+- Main Libs
+  - [Express](https://expressjs.com/pt-br/)
+  - [Cors](https://www.npmjs.com/package/cors)
+  - [Crypto](https://nodejs.org/api/crypto.html)
+
+- Estilos
+  - [Prettier](https://prettier.io/)
+  - [Eslint](https://www.npmjs.com/package/eslint)
+
+## :rocket: Description
 
 Crie uma aplicação para armazenar projetos e suas tarefas do zero utilizando [Express](https://expressjs.com/pt-br/).
 
-### Rotas
+### Routes
 
 - `POST /projects`: A rota deve receber `id` e `title` dentro do corpo e cadastrar um novo projeto dentro de um array no seguinte formato: `{ id: "1", title: 'Novo projeto', tasks: [] }`; Certifique-se de enviar tanto o ID quanto o título do projeto no formato string com aspas duplas.
 
@@ -56,7 +113,7 @@ Crie uma aplicação para armazenar projetos e suas tarefas do zero utilizando [
 
 - `POST /projects/:id/tasks`: A rota deve receber um campo `title` e armazenar uma nova tarefa no array de tarefas de um projeto específico escolhido através do `id` presente nos parâmetros da rota;
 
-### Exemplo
+### Exemple
 
 Se eu chamar a rota `POST /projects` repassando `{ id: 1, title: 'Novo projeto' }` e a rota `POST /projects/1/tasks` com `{ title: 'Nova tarefa' }`, meu array de projetos deve ficar assim:
 
@@ -76,24 +133,11 @@ Se eu chamar a rota `POST /projects` repassando `{ id: 1, title: 'Novo projeto' 
 
 - Crie um middleware global chamado em todas requisições que imprime (`console.log`) uma contagem de quantas requisições foram feitas na aplicação até então;
 
-### Pre-requisitos
+## Environment variables
 
-* Node.js
-* NPM ou Yarn
-* VSCode
-* Docker
-* Docker-Compose
-
-### :rocket: Tecnologias usadas
-
-Este maravilindo projeto foi desenvolvido com as seguintes tecnologias:
-- [Node.js](https://nodejs.org/en/)
-- [Express](https://expressjs.com/pt-br/)
-- [Nodemon](https://www.npmjs.com/package/nodemon)
-- [Cors](https://www.npmjs.com/package/cors)
-- [Eslint](https://www.npmjs.com/package/eslint)
-- [Sucrase](https://www.npmjs.com/package/sucrase)
-- [Prettier](https://prettier.io/)
+**Name**  |  **Description**
+:---:  |  :---:
+**NODE_PORT**  |  Node Port used by Express to listen all requests
 
 ## 🐋 Development with Docker
 
@@ -241,7 +285,7 @@ Hey!! If you like this project or if you find some bugs feel free to contact me 
 
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/lpmatos"><img src="https://avatars2.githubusercontent.com/u/58797390?s=400&v=4" width="100px;" alt=""/><br /><sub><b>Lucca Pessoa</b></sub></a><br /><a href="https://github.com/lpmatos/omnistack/commits?author=lpmatos" title="Code">💻</a></a></td>
+    <td align="center"><a href="https://github.com/lpmatos"><img src="https://avatars2.githubusercontent.com/u/58797390?s=400&v=4" width="100px;" alt=""/><br /><sub><b>Lucca Pessoa</b></sub></a><br /><a href="https://github.com/lpmatos/simple-node-rest/commits?author=lpmatos" title="Code">💻</a></a></td>
   <tr>
 </table>
 
@@ -249,7 +293,7 @@ Hey!! If you like this project or if you find some bugs feel free to contact me 
 
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/lpmatos"><img src="https://avatars2.githubusercontent.com/u/58797390?s=400&v=4" width="100px;" alt=""/><br /><sub><b>Lucca Pessoa</b></sub></a><br /><a href="https://github.com/lpmatos/omnistack/commits?author=lpmatos" title="Code">💻</a> <a href="#lpmatos" title="Design">🎨</a></td>
+    <td align="center"><a href="https://github.com/lpmatos"><img src="https://avatars2.githubusercontent.com/u/58797390?s=400&v=4" width="100px;" alt=""/><br /><sub><b>Lucca Pessoa</b></sub></a><br /><a href="https://github.com/lpmatos/simple-node-rest/commits?author=lpmatos" title="Code">💻</a> <a href="#lpmatos" title="Design">🎨</a></td>
   <tr>
 </table>
 
